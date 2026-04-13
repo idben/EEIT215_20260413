@@ -11,10 +11,10 @@ const textSize = 36;
 </script>
 <template>
     <div>
-        <img v-bind:src="imageUrl" alt="">
-        <a v-bind:href="link">點擊我</a>
-        <div v-bind:class="className"></div>
-        <button v-bind:disabled="!isLoading">點擊我</button>
+        <img :src="imageUrl" alt="">
+        <a :href="link">點擊我</a>
+        <div :class="className"></div>
+        <button :disabled="!isLoading">點擊我</button>
     </div>
 </template>
 <style scoped>
