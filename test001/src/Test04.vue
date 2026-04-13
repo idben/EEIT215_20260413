@@ -1,5 +1,5 @@
 <script setup>
-import {ref} from 'vue'
+import { ref } from 'vue'
 
 const imageUrl = 'https://images.pexels.com/photos/16197273/pexels-photo-16197273.jpeg'
 const link = 'https://images.pexels.com/photos/16197273/pexels-photo-16197273.jpeg'
@@ -15,19 +15,43 @@ const textSize = 36;
         <a :href="link">點擊我</a>
         <div :class="className"></div>
         <button :disabled="!isLoading">點擊我</button>
+        <button class="btn" :class="{ disable: !isLoading }">點擊我</button>
     </div>
 </template>
 <style scoped>
-img{
+img {
     width: 200px;
 }
-a{
+
+a {
     display: block;
 }
-.circle{
+
+.circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     background-color: #edb9b9;
+}
+
+.btn {
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: fit-content;
+    background-color: #01aaff;
+    border-radius: 5px;
+    color: #fff;
+    user-select: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: #006eff;
+    }
+
+    &.disable {
+        background-color: #646464;
+        cursor: not-allowed;
+    }
 }
 </style>
