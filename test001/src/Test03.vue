@@ -1,6 +1,8 @@
 <script setup>
+import { ref } from 'vue';
+
 const message = 'Hello Vue!'
-const isActive = false
+const isActive = ref(false)
 </script>
 <template>
     <div>
@@ -8,6 +10,7 @@ const isActive = false
         <p>計算: {{1+1}}</p>
         <p>呼叫方法: {{message.toUpperCase()}}</p>
         <p>三元運算: {{ isActive ? "啟用": "停用"}}</p>
+        <button v-on:click="isActive = !isActive">點擊我</button>
     </div>
 </template>
 <style scoped></style>
