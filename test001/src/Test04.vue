@@ -15,7 +15,9 @@ const textSize = 36;
         <a :href="link">點擊我</a>
         <div :class="className"></div>
         <button :disabled="!isLoading">點擊我</button>
-        <button class="btn" :class="{ disable: !isLoading }">點擊我</button>
+        <button class="btn" :class="{ disable: !isLoading }">點擊我(物件式)</button>
+        <button :class="['btn', { disable: !isLoading }]">點擊我(陣列式)</button>
+        <div :style="{ color: textColor, fontSize: textSize + 'px' }">綁定 style</div>
     </div>
 </template>
 <style scoped>
