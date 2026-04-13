@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <div class="row">
+            <label for="userID">ID</label>
+            <input type="text" name="userID" id="userID" placeholder="輸入使用者帳號">
+        </div>
+
+        <div class="row">
+            <label for="userPWD">password</label>
+            <input type="password" name="userPWD" id="userPWD" placeholder="輸入密碼">
+        </div>
+
+        <div class="ctrl">
+            <button>送出</button>
+        </div>
+
+    </form>
+
+    <script>
+        const form = document.querySelector("form");
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            // 做了很多簡查之後, 欄位內容都有了都正確了
+            // e.target.submit(); // 再送出表單
+        });
+
+    </script>
+</body>
+
+</html>
