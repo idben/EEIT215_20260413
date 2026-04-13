@@ -7,7 +7,7 @@ const className = "circle"
 const isLoading = ref(true)
 const textColor = "pink"
 const textSize = 36;
-
+const isActive = ref(false)
 </script>
 <template>
     <div>
@@ -18,6 +18,9 @@ const textSize = 36;
         <button class="btn" :class="{ disable: !isLoading }">點擊我(物件式)</button>
         <button :class="['btn', { disable: !isLoading }]">點擊我(陣列式)</button>
         <div :style="{ color: textColor, fontSize: textSize + 'px' }">綁定 style</div>
+        <button class="bg1" :class="{ bg2: isActive }" v-on:click="isActive = !isActive">
+            {{ isActive ? "變紅色" : "變綠色" }}
+        </button>
     </div>
 </template>
 <style scoped>
@@ -55,5 +58,15 @@ a {
         background-color: #646464;
         cursor: not-allowed;
     }
+}
+
+.bg1 {
+    background-color: #e01414;
+    color: #fff;
+}
+
+.bg2 {
+    background-color: #07c914;
+    color: #fff;
 }
 </style>
