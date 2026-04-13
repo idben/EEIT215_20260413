@@ -6,7 +6,7 @@ const userPWD = ref("")
 
 const handleSubmit = (e) => {
     // e.preventDefault();
-    // console.log({ userID, userPWD }); // 簡寫
+    // console.log({ userID, userPWD }); // 簡寫, 但要屬性和來源一模一樣才能簡寫
     console.log({ userID: userID.value, userPWD: userPWD.value });
 }
 
