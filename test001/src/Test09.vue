@@ -1,11 +1,19 @@
 <script setup>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 const fruits = ref([
     { id: 1, name: '蘋果' },
     { id: 2, name: '香蕉' },
     { id: 3, name: '橘子' },
 ])
+
+const profile = reactive({
+    姓名: '小明',
+    年齡: 25,
+    信箱: 'ming@example.com',
+    城市: '台北'
+});
+
 const newFruit = ref('');
 
 const addFruit = () => {
@@ -29,6 +37,10 @@ const addFruit = () => {
             </li>
         </ul>
         <input type="text" v-model="newFruit" @keyup.enter="addFruit">
+        <h1>個人資料</h1>
+        <div v-for="(value, key) in profile" :key="key">
+            {{ key }}: {{ value }}
+        </div>
     </div>
 </template>
 <style scoped></style>
