@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 
 const count = ref(0);
+let count2 =  ref(0);
 const msg = ref("HelloWorld Vue");
 const name = ref('Vue');
 const isVisible = ref(true);
@@ -17,6 +18,8 @@ items.value[count.value] = "西瓜"
     <h1>{{name}}</h1>
     <h3>{{isVisible}}</h3>
     <h1>{{ items[count] }}</h1>
+    <h1>{{count2}}</h1>
+    <button v-on:click="count2++">點擊我</button>
 </template>
 <style scoped>
 h1{
