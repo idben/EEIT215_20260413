@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const userID = ref("")
+const userID = ref("ben")
 const userPWD = ref("")
 
 const handleSubmit = (e) => {
